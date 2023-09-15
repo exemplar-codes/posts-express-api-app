@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/exemplar-codes/posts-express-api-app#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "nodemon": "^3.0.1"
   }
 }
