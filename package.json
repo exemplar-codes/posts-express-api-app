@@ -1,0 +1,26 @@
+{
+  "name": "posts-express-api-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fe": "npm start --prefix frontend",
+    "be": "nodemon app.js",
+    "serve": "npm run be & npm run fe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exemplar-codes/posts-express-api-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exemplar-codes/posts-express-api-app/issues"
+  },
+  "homepage": "https://github.com/exemplar-codes/posts-express-api-app#readme",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
