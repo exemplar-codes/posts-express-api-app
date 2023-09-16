@@ -2,7 +2,12 @@ const express = require("express");
 const { connect, get } = require("./utils/database");
 const postsRouter = require("./routes/posts");
 
+const cors = require("cors");
 const app = express();
+
+// cors (since FE and BE ports are different in dev mode)
+// fixes other problems too
+app.use(cors());
 
 // set up input middlewares
 app.use(express.json());
