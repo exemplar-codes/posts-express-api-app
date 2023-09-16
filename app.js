@@ -7,6 +7,15 @@ const app = express();
 // set up input middlewares
 app.use(express.json());
 
+// static server
+// Visit: `/public/check.txt` to check
+app.use(
+  "/public",
+  express.static("./public", {
+    extensions: ["html", "htm", "jpg"],
+  })
+);
+
 app.get("/", (req, res, next) => {
   res.status(200).send("Server is running fine");
 });
