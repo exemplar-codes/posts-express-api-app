@@ -7,6 +7,22 @@ app.get("/", (req, res, next) => {
   res.status(200).send("Server is running fine");
 });
 
+// Error sink
+app.get("/error-check", (req, res, next) => {
+  throw new Error("error-check");
+  // res.status(200).send("Server is running fine");
+});
+app.get("/error-check-async", (req, res, next) => {
+  fetch("")
+    .then(() => {})
+    .catch((err) => next(err));
+});
+app.use((err, req, res, next) => {
+  res.status(err.statusCode || 500).send(err || err.message || "500 error");
+
+  console.log(res.statusCode, { err });
+});
+
 app.use((req, res) => {
   res.send("404");
 });
