@@ -27,7 +27,7 @@ class Feed extends Component {
         if (res.status !== 200) {
           throw new Error('Failed to fetch user status.');
         }
-        return res.json();
+        return res.type === "basic" ? res.text() : res.json();
       })
       .then(resData => {
         this.setState({ status: resData.status });
@@ -55,12 +55,12 @@ class Feed extends Component {
         if (res.status !== 200) {
           throw new Error('Failed to fetch posts.');
         }
-        return res.json();
+        return res.type === "basic" ? res.text() : res.json();
       })
       .then(resData => {
         this.setState({
-          posts: resData.posts,
-          totalPosts: resData.totalItems,
+          posts: resData.posts || [],
+          totalPosts: resData.totalItems || [],
           postsLoading: false
         });
       })
