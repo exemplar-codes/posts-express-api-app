@@ -4,6 +4,9 @@ const postsRouter = require("./routes/posts");
 
 const app = express();
 
+// set up input middlewares
+app.use(express.json());
+
 app.get("/", (req, res, next) => {
   res.status(200).send("Server is running fine");
 });
