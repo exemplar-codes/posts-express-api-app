@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Image from '../../../components/Image/Image';
 import './SinglePost.css';
+import { postsURL } from '../../../util/api';
 
 class SinglePost extends Component {
   state = {
@@ -14,7 +15,7 @@ class SinglePost extends Component {
 
   componentDidMount() {
     const postId = this.props.match.params.postId;
-    fetch('URL')
+    fetch(postsURL)
       .then(res => {
         if (res.status !== 200) {
           throw new Error('Failed to fetch status');
