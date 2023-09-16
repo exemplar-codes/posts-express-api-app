@@ -1,11 +1,14 @@
 const express = require("express");
 const { connect, get } = require("./utils/database");
+const postsRouter = require("./routes/posts");
 
 const app = express();
 
 app.get("/", (req, res, next) => {
   res.status(200).send("Server is running fine");
 });
+
+app.use("/posts", postsRouter);
 
 // Error sink
 app.get("/error-check", (req, res, next) => {
