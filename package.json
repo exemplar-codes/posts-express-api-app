@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "fe": "npm start --prefix frontend",
     "be": "nodemon app.js",
-    "serve": "npm run be & npm run fe"
+    "build-fe": "rm -rf frontend/build public/build && npm run build --prefix frontend && mv frontend/build public/",
+    "serve": "npm run build-fe & npm run be"
   },
   "repository": {
     "type": "git",

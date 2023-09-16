@@ -16,6 +16,9 @@ app.use(
   })
 );
 
+// react build folder
+app.use(express.static("./public/build"));
+
 app.get("/", (req, res, next) => {
   res.status(200).send("Server is running fine");
 });
