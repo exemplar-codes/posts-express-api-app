@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fe-install": "rm -rf frontend/node_modules && pnpm install --prefix frontend",
+    "fe-install": "pnpm install --prefix frontend",
     "fe": "pnpm start --prefix frontend",
     "be": "nodemon app.js",
     "_fe_be_why": "#both fe and be are dev - we need two terminals for debugging both FE and BE apps at simultaneously and independently",
-    "build-fe": "rm -rf frontend/build public/build && pnpm run build --prefix frontend && mv frontend/build public/",
+    "build-fe": "pnpm run build --prefix frontend",
     "serve-be": "node app.js",
     "_build-fe_and_serve-be_why": "#In prod, need to build frontend first and start BE next",
     "start-server": "pnpm run fe-install && pnpm run build-fe && pnpm run serve-be",
