@@ -22,7 +22,8 @@ app.use(
 );
 
 // react build folder
-app.use(express.static("./frontend/build"));
+// app.use(express.static("./frontend/build")); // CRA
+app.use(express.static("./frontend/dist")); // Vite
 
 app.get("/", (req, res, next) => {
   res.status(200).send("Server is running fine");

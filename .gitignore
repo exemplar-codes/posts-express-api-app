@@ -133,3 +133,4 @@ dist
 .DS_Store
 
 !public/build
+!frontend/dist
