@@ -12,9 +12,10 @@
     "build-fe": "rm -rf frontend/build public/build && npm run build --prefix frontend && mv frontend/build public/",
     "serve-be": "node app.js",
     "_build-fe_and_serve-be_why": "#In prod, need to build frontend first and start BE next",
-    "serve": "npm run build-fe && npm run serve-be",
     "start-server": "npm run fe-install && npm run build-fe && npm run serve-be",
-    "_why_serve_and_start-server": "#serve is for local serve (single terminal), start-server is for deploy"
+    "_why_serve_and_start-server": "#serve is for local serve (single terminal), start-server is for deploy",
+    "---for-deploy": "#",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
