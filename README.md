@@ -1,5 +1,7 @@
 # posts-express-api-app
 
+Live link - https://posts-api-app.onrender.com/
+
 The main goal is to build the backend. I copied the frontend from Udemy.
 
 ## What is this app
