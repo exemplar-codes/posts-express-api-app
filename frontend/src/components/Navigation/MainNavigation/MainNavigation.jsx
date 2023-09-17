@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink, Redirect } from 'react-router-dom';
 
 import MobileToggle from '../MobileToggle/MobileToggle';
 import Logo from '../../Logo/Logo';
@@ -14,6 +14,11 @@ const mainNavigation = props => (
       <NavLink to="/">
         <Logo />
       </NavLink>
+    </div>
+    <div className="main-nav__logo" style={{marginLeft: "20px"}}>
+      <Link to={{pathname: "https://github.com/exemplar-codes/posts-express-api-app"}} target="_blank">
+        <Logo title="Source code"/>
+      </Link>
     </div>
     <div className="spacer" />
     <ul className="main-nav__items">
