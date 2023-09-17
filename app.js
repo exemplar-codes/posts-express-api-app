@@ -9,6 +9,15 @@ const app = express();
 // fixes other problems too
 app.use(cors());
 
+// request logger
+app.use((req, res, next) => {
+  console.log({
+    url: req.url,
+    time: new Date().toLocaleTimeString(),
+  });
+  next();
+});
+
 // set up input middlewares
 app.use(express.json());
 
