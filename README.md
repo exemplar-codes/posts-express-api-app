@@ -1,6 +1,7 @@
 # posts-express-api-app
 
 Live link - https://posts-api-app.onrender.com/
+Deployment link (private) - https://dashboard.render.com/web/srv-ck333mmru70s73b2db3g
 
 The main goal is to build the backend. I copied the frontend from Udemy.
 
