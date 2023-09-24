@@ -14,6 +14,9 @@ const PostSchema = mongoose.Schema(
       type: String,
       required: false,
     },
+    creator: {
+      name: { type: String, required: true },
+    },
   },
   {
     timestamps: true,

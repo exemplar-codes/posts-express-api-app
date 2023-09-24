@@ -4,7 +4,7 @@ const postsIndex = async (req, res, next) => {
   try {
     const posts = await Post.find().lean();
 
-    res.status(200).json({ data: posts, _message: "postsIndex" });
+    res.status(200).json({ posts, _message: "postsIndex" });
   } catch (error) {
     next(error);
   }
@@ -14,9 +14,7 @@ const postsShow = async (req, res, next) => {
   try {
     const post = await Post.findById(req.params.id).lean();
 
-    res
-      .status(200)
-      .json({ data: post, id: req.params.id, _message: "postsShow" });
+    res.status(200).json({ post, _message: "postsShow" });
   } catch (error) {
     next(error);
   }
@@ -24,10 +22,10 @@ const postsShow = async (req, res, next) => {
 
 const postsCreate = async (req, res, next) => {
   try {
-    const post = new Post(req.body);
-    await post.save();
+    const post = new Post({ creator: { name: "myDefault user" }, ...req.body });
+    const newPost = await post.save();
 
-    res.status(200).json({ data: post, _message: "postsShow" });
+    res.status(200).json({ data: newPost, _message: "postsShow" });
   } catch (error) {
     next(error);
   }
@@ -35,9 +33,7 @@ const postsCreate = async (req, res, next) => {
 
 const postsUpdate = async (req, res, next) => {
   try {
-    const post = await Post.findByIdAndUpdate(req.params.id, {
-      $set: req.body,
-    });
+    const post = await Post.findByIdAndUpdate(req.params.id, req.body);
 
     res.status(200).json({ data: post, _message: "postsUpdate" });
   } catch (error) {
