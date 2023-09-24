@@ -9,6 +9,12 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
+@media (min-height: 600px) {
+  .modal {
+    top: 5vh;
+  }
+}
+
 .modal__header {
   border-bottom: 2px solid #3b0062;
 }
