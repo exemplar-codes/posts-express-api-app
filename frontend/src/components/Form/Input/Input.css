@@ -20,8 +20,8 @@
 }
 
 .input .touched.invalid {
-    border-color: red;
-    background: #ffc2c2;
+  border-color: red;
+  background: #ffc2c2;
 }
 
 .input input:focus,

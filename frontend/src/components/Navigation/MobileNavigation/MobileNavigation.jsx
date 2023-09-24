@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import NavigationItems from '../NavigationItems/NavigationItems';
-import './MobileNavigation.css';
+import NavigationItems from "../NavigationItems/NavigationItems";
+import "./MobileNavigation.css";
 
-const mobileNavigation = props => (
-  <nav className={['mobile-nav', props.open ? 'open' : ''].join(' ')}>
+const mobileNavigation = (props) => (
+  <nav className={["mobile-nav", props.open ? "open" : ""].join(" ")}>
     <ul
-      className={['mobile-nav__items', props.mobile ? 'mobile' : ''].join(' ')}
+      className={["mobile-nav__items", props.mobile ? "mobile" : ""].join(" ")}
     >
       <NavigationItems
         mobile

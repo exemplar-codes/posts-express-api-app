@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import './Paginator.css';
+import "./Paginator.css";
 
-const paginator = props => (
+const paginator = (props) => (
   <div className="paginator">
     {props.children}
     <div className="paginator__controls">

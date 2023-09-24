@@ -18,7 +18,7 @@
 }
 
 @media (min-width: 768px) {
-    .mobile-toggle {
-        display: none;
-    }
+  .mobile-toggle {
+    display: none;
+  }
 }
